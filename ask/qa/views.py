@@ -1,5 +1,9 @@
-from django.http import HttpResponce
+from django.http import HttpResponse, HttpResponseNotFound
 
 
 def test(request, *args, **kwards):
-    return HttpResponce('Ok')
+    return HttpResponse('Ok')
+
+
+def err(request, *args, **kwards):
+    return HttpResponseNotFound('Ok')
